@@ -37,6 +37,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+    post:
+      summary: 'Sample endpoint: Add user to collection'
+      operationId: getById
+      tags:
+        - user
+      responses:
+        '200':
+          description: 'Sample response: The user created'
+          headers:
+            x-next:
+              description: A link to the next page of responses
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     User:
