@@ -5,16 +5,16 @@ info:
 servers:
   - url: 'http://localhost:3000/surfwatch/v0'
 paths:
-  /users:
+  /users/{id}:
     get:
-      summary: 'Sample endpoint: Returns details about a particular user'
+      summary: Get a user by ID
       operationId: getById
       tags:
         - user
       parameters:
         - name: id
           in: query
-          description: ID of the user
+          description: Numeric ID of the user to get
           required: true
           schema:
             type: integer
