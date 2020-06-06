@@ -39,17 +39,19 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       summary: 'Sample endpoint: Add user to collection'
-      operationId: getById
+      operationId: create
       tags:
         - user
       responses:
-        '200':
+        '201':
           description: 'Sample response: The user created'
-          headers:
-            x-next:
-              description: A link to the next page of responses
-              schema:
-                type: string
+          schema:
+            $ref: '#/components/schemas/User'
+        #   headers:
+        #     x-next:
+        #       description: A link to the next page of responses
+        #       schema:
+        #         type: string
           content:
             application/json:
               schema:
