@@ -13,7 +13,7 @@ paths:
         - user
       parameters:
         - name: id
-          in: query
+          in: path
           description: Numeric ID of the user to get
           required: true
           schema:
